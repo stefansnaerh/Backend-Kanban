@@ -2,10 +2,6 @@ const asyncHandler = require('express-async-handler')
 
 const Board = require('../models/boardModel')
 const Task = require('../models/taskModel')
-const SubTask = require('../models/subTaskModel')
-
-
-
 
 
 // Desc : set task
@@ -55,7 +51,6 @@ const deleteTask = asyncHandler(async(req, res) => {
         {_id: req.params.boardId}, 
         {$pull: {tasks : {_id: req.params.taskId}}},
          function(err, data){
-        console.log(err, data)
      }).clone()
      res.status(200).json({id : req.params.taskId})
 })
