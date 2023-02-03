@@ -13,6 +13,11 @@ connectDB()
 
 const app = express() // initialize express
 
+app.get("/", (req, res) => {
+    res.send("Express on Vercel");
+  });
+
+
 app.use(cors())
 // to be able to read body data
 app.use(express.json())
