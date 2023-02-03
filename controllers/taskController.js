@@ -28,9 +28,9 @@ const setTask = asyncHandler(async(req, res) => {
     })
 })
 
-// Desc : update task
+// Desc : update task  .
 // Route : GET /api/boards/:boardId/tasks/:taskId
-// access : Private 
+// access : Private  
 const updateTask = asyncHandler(async(req, res) => {
         await Board.findById(req.params.boardId)
         .then((board) => {
