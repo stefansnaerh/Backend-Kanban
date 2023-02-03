@@ -11,7 +11,7 @@ const mongoUri = process.env.MONGO_URI
 connectDB()
 
 
-const app = express() // initialize express
+const app = express() // initialize express  
 
 app.get("/", (req, res) => {
     res.send("Express on Vercel");
@@ -30,3 +30,6 @@ app.use('/api/users', require('./routes/userRoutes'))
 app.use(errorHandler)
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
+
+
+module.exports = app
