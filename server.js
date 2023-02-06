@@ -6,7 +6,6 @@ dotenv.config({path:__dirname+'/.env'});
 const {errorHandler} = require('./middleware/errorMiddleware') // bringing in errorhandler from middleware
 const connectDB =   require('./config/db') 
 const port = process.env.PORT || 5001
-const mongoUri = process.env.MONGO_URI
 
 connectDB()
 
