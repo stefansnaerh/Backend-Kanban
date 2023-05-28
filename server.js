@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 const allowedOrigins = ["https://kanban-kappa-seven.vercel.app/", "http://localhost:3000"];
 app.use(cors({
-  origin: '*'
+  origin: allowedOrigins
 }))
 // to be able to read body data
 app.use(express.json())
